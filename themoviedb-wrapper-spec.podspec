@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "themoviedb-wrapper-spec"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "This wrapper is written to make the use to TheMovieDB API simple. Codable models are already written in this library."
 
 
@@ -94,10 +94,11 @@ This library is the basic wrapper for The Movie DB APIs. This wrapper is written
   #  Not including the public_header_files will make all headers public.
   #
 
-s.source_files  = "themoviedb-wrapper", "themoviedb-wrapper/**/*.{swift}"
-  s.exclude_files = "Classes/Exclude"
+    s.source_files  = "themoviedb-wrapper/*.swift", "themoviedb-wrapper/Movie/*.swift", "themoviedb-wrapper/Multi/*.swift", "themoviedb-wrapper/Person/*.swift", "themoviedb-wrapper/TableContent/*.swift", "themoviedb-wrapper/TV/*.swift"
+  # s.source_files  = "themoviedb-wrapper", "themoviedb-wrapper/**/*.{swift}"
+  # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  # s.public_header_files = "themoviedb-wrapper/**/*.swift"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
