@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "themoviedb-wrapper-spec"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "This wrapper is written to make the use to TheMovieDB API simple. Codable models are already written in this library."
 
 
@@ -74,6 +74,7 @@ This library is the basic wrapper for The Movie DB APIs. This wrapper is written
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
+  s.swift_version = "4.2"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -94,8 +95,12 @@ This library is the basic wrapper for The Movie DB APIs. This wrapper is written
   #  Not including the public_header_files will make all headers public.
   #
 
-    s.source_files  = "themoviedb-wrapper/*.swift", "themoviedb-wrapper/Movie/*.swift", "themoviedb-wrapper/Multi/*.swift", "themoviedb-wrapper/Person/*.swift", "themoviedb-wrapper/TableContent/*.swift", "themoviedb-wrapper/TV/*.swift"
-  # s.source_files  = "themoviedb-wrapper", "themoviedb-wrapper/**/*.{swift}"
+    s.source_files      = "themoviedb-wrapper/*.swift"
+    s.ios.source_files  = "themoviedb-wrapper/*.swift"
+    s.osx.source_files  = "themoviedb-wrapper/*.swift"
+    s.tvos.source_files = "themoviedb-wrapper/*.swift"
+    
+  # s.source_files  = "themoviedb-wrapper", "themoviedb-wrapper/**/*"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "themoviedb-wrapper/**/*.swift"
@@ -138,7 +143,6 @@ This library is the basic wrapper for The Movie DB APIs. This wrapper is written
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
- s.swift_version = "4.2"
 
 
 end
